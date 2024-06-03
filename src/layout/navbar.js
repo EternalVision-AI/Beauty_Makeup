@@ -29,5 +29,6 @@ style(/* CSS */ `
     height:45px;
     background: url('logo.jpg');
     background-size: cover;
+    border-radius: 100%;
   }
 `)
