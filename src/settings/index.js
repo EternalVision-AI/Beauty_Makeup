@@ -11,26 +11,26 @@ import Retouch from "./retouch.js"
 import Settings from "./settings.js"
 
 const routes = [
-  { path: "/looks", component: Looks, meta: { icon: "looks", title: "Looks" } },
+  // { path: "/looks", component: Looks, meta: { icon: "looks", title: "Looks" } },
+  // {
+  //   path: "/presets",
+  //   component: Presets,
+  //   meta: { icon: "presets", title: "Presets" },
+  // },
+  // {
+  //   path: "/retouch",
+  //   component: Retouch,
+  //   meta: { icon: "retouch", title: "Retouch" },
+  // },
   {
-    path: "/presets",
-    component: Presets,
-    meta: { icon: "presets", title: "Presets" },
-  },
-  {
-    path: "/retouch",
-    component: Retouch,
-    meta: { icon: "retouch", title: "Retouch" },
+    path: "/eyes",
+    component: Eyes,
+    meta: { icon: "eyes", title: "Eyes" },
   },
   {
     path: "/makeup",
     component: Makeup,
     meta: { icon: "makeup", title: "Makeup" },
-  },
-  {
-    path: "/eyes",
-    component: Eyes,
-    meta: { icon: "eyes", title: "Eyes" },
   },
   {
     path: "/lipstick",
@@ -42,12 +42,12 @@ const routes = [
     component: Hair,
     meta: { icon: "hair", title: "Hair" },
   },
-  {
-    path: "/background",
-    component: Background,
-    meta: { icon: "background", title: "Background" },
-  },
-  { path: "/luts", component: LUTs, meta: { icon: "luts", title: "LUTs" } },
+  // {
+  //   path: "/background",
+  //   component: Background,
+  //   meta: { icon: "background", title: "Background" },
+  // },
+  // { path: "/luts", component: LUTs, meta: { icon: "luts", title: "LUTs" } },
 ]
 
 const root = {

@@ -75,7 +75,26 @@ export default {
           append-to-body
         />
       </b-field>
-      <b-field
+      
+      
+    </bnb-setting>
+  `,
+}
+
+style(/* CSS */ `
+  .bnb-checkbox .control-label {
+    padding: 0 !important;
+  }
+  .bnb-colorpicker .dropdown,
+  .bnb-colorpicker .dropdown-trigger,
+  .bnb-colorpicker .button {
+    width: 100%;
+    max-height: 30px;
+  }
+`)
+
+
+{/* <b-field
         class="pt-2 pb-2 mb-2"
         custom-class="has-text-link is-capitalized is-flex is-align-items-center"
       >
@@ -123,9 +142,9 @@ export default {
           position="is-top-right"
           alpha
           append-to-body
-        />
+        /> 
       </b-field>
-      <bnb-slider
+    <bnb-slider
         class="mb-2"
         :title="eyes.whitening.title"
         :value="eyes.whitening.strength"
@@ -137,18 +156,8 @@ export default {
         :value="eyes.flare.strength"
         @input="eyes.update({ flare: { strength: $event } })"
       />
-    </bnb-setting>
-  `,
-}
-
-style(/* CSS */ `
-  .bnb-checkbox .control-label {
-    padding: 0 !important;
-  }
-  .bnb-colorpicker .dropdown,
-  .bnb-colorpicker .dropdown-trigger,
-  .bnb-colorpicker .button {
-    width: 100%;
-    max-height: 30px;
-  }
-`)
+    
+    
+    
+    
+    */}
