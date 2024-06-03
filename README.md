@@ -1,6 +1,6 @@
 # WebAR/Beauty demo app
 
-Try it Live: [banuba.github.io/beauty-web](https://banuba.github.io/beauty-web)
+Try it Live: [beauty-makeup.vercel.app](https://beauty-makeup.vercel.app/#/)
 
 ![WebAR/Beauty preview](preview.png)
 

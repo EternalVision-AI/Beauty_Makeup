@@ -5,7 +5,7 @@ export default {
   props: ["loading"],
   components: { BnbNavbar },
   template: /* HTML */ `
-    <div class="bnb-layout is-flex is-flex-direction-column has-background-link-light">
+    <div class="bnb-layout is-flex is-flex-direction-column">
       <b-loading :active="loading" :is-full-page="false"></b-loading>
       <bnb-navbar class="is-flex-shrink-0" />
       <div style="min-height:0" class="is-flex is-flex-grow-1 p-4">
@@ -29,6 +29,8 @@ style(/* CSS */ `
   .bnb-layout {
     width: 100%;
     height: 100%;
+    background: #000 url('static/images/bg-2.jpg') 50% no-repeat;
+    background-size: cover;
   }
   .bnb-layout__workspace {
     width: 100%;

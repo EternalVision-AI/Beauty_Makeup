@@ -22,10 +22,10 @@ export const style = (textContent) =>
 
 export const theme = {
   colors: {
-    base: "#3A51BB",
-    light: "#EEF3FC",
-    border: "#C3CAEC",
-    borderLight: "#EFF1FA",
+    base: "#c471ed",
+    light: "#f37dae",
+    border: "#12c2e9",
+    borderLight: "#c471ed",
   },
 }
 
