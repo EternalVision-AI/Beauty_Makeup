@@ -8,7 +8,7 @@ const BnbApp = {
   data: () => ({ isLoading: false }),
   methods: {
     toggleLoading() {
-      this.isLoading = false
+      this.isLoading = !this.isLoading
     },
   },
   components: { BnbLayout, BnbSettings, BnbViewer, BnbFeatures },
