@@ -19,6 +19,26 @@ export default {
     cover: "assets/looks/Bluebell.jpg",
     texture: "assets/textures/makeup_bluebell.png",
   },
+  makeup_classic: {
+    title: "Classic",
+    cover: "assets/looks/Classic.jpg",
+    texture: "assets/textures/makeup_classic.png",
+  },
+  makeup_hybrid: {
+    title: "Hybrid",
+    cover: "assets/looks/Hybrid.jpg",
+    texture: "assets/textures/makeup_hybrid.png",
+  },
+  makeup_volume: {
+    title: "Volume",
+    cover: "assets/looks/Volume.jpg",
+    texture: "assets/textures/makeup_volume.png",
+  },
+  makeup_mega: {
+    title: "Mega",
+    cover: "assets/looks/Mega.jpg",
+    texture: "assets/textures/makeup_mega.png",
+  },
   makeup_coral: {
     title: "Coral",
     cover: "assets/looks/Coral.jpg",

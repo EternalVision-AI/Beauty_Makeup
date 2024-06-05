@@ -32,5 +32,8 @@ export default {
 style(/* CSS */ `
   .bnb-looks {
     margin-right: -0.75rem;
+    background: url('static/images/eyes.jpg') no-repeat;
+    background-size: contain;
   }
+
 `)
