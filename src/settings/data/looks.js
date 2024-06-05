@@ -59,6 +59,66 @@ export default {
     cover: "assets/looks/hybrid/Eyeliner.png",
     texture: "assets/textures/hybrid/makeup_eyeliner.png",
   },
+  makeup_volume_dolly: {
+    title: "Volume-Dolly",
+    cover: "assets/looks/volume/Dolly.png",
+    texture: "assets/textures/volume/makeup_dolly.png",
+  },
+  makeup_volume_squirrel: {
+    title: "Volume-Squirrel",
+    cover: "assets/looks/volume/Squirrel.png",
+    texture: "assets/textures/volume/makeup_squirrel.png",
+  },
+  makeup_volume_round: {
+    title: "Volume-Round",
+    cover: "assets/looks/volume/Round.png",
+    texture: "assets/textures/volume/makeup_round.png",
+  },
+  makeup_volume_cat: {
+    title: "Volume-Cat",
+    cover: "assets/looks/volume/Cat.png",
+    texture: "assets/textures/volume/makeup_cat.png",
+  },
+  makeup_volume_kimk: {
+    title: "Volume-KIMK",
+    cover: "assets/looks/volume/KIMK.png",
+    texture: "assets/textures/volume/makeup_kimk.png",
+  },
+  makeup_volume_eyeliner: {
+    title: "Volume-Eyeliner",
+    cover: "assets/looks/volume/Eyeliner.png",
+    texture: "assets/textures/volume/makeup_eyeliner.png",
+  },
+  makeup_mega_dolly: {
+    title: "Mega-Dolly",
+    cover: "assets/looks/mega/Dolly.png",
+    texture: "assets/textures/mega/makeup_dolly.png",
+  },
+  makeup_mega_squirrel: {
+    title: "Mega-Squirrel",
+    cover: "assets/looks/mega/Squirrel.png",
+    texture: "assets/textures/mega/makeup_squirrel.png",
+  },
+  makeup_mega_round: {
+    title: "Mega-Round",
+    cover: "assets/looks/mega/Round.png",
+    texture: "assets/textures/mega/makeup_round.png",
+  },
+  makeup_mega_cat: {
+    title: "Mega-Cat",
+    cover: "assets/looks/mega/Cat.png",
+    texture: "assets/textures/mega/makeup_cat.png",
+  },
+  makeup_mega_kimk: {
+    title: "Mega-KIMK",
+    cover: "assets/looks/mega/KIMK.png",
+    texture: "assets/textures/mega/makeup_kimk.png",
+  },
+  makeup_mega_eyeliner: {
+    title: "Mega-Eyeliner",
+    cover: "assets/looks/mega/Eyeliner.png",
+    texture: "assets/textures/mega/makeup_eyeliner.png",
+  },
   // makeup_40s: {
   //   title: "40s",
   //   cover: "assets/looks/40s.jpg",
