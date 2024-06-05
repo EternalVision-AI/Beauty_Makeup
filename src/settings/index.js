@@ -11,7 +11,7 @@ import Retouch from "./retouch.js"
 import Settings from "./settings.js"
 
 const routes = [
-  { path: "/looks", component: Looks, meta: { icon: "looks", title: "Looks" } },
+  { path: "/looks", component: Looks, meta: { icon: "looks", title: "Eye Lashes" } },
   {
     path: "/presets",
     component: Presets,
