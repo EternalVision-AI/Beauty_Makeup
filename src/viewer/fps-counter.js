@@ -43,9 +43,9 @@ export default {
 style(/* CSS */ `
   .bnb-fps {
     overflow: hidden;
-    min-width: 8.75rem;
+    min-width: 10%;
     color: #ffffff;
-    font-size: 0.75rem;
+    font-size: 10%;
     }
   .collapse-content {
     padding: 0.5rem 0.75rem;

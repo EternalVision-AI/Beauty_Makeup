@@ -9,16 +9,12 @@ export default {
       <b-loading :active="loading" :is-full-page="false"></b-loading>
       <bnb-navbar class="is-flex-shrink-0" />
       <div style="min-height:0" class="is-flex is-flex-grow-1 p-4">
-        <section class="container is-flex m-auto bnb-layout__workspace">
+        <section class="container m-auto bnb-layout__workspace">
           <aside class="box is-flex-shrink-0 bnb-layout__panel"><slot name="left" /></aside>
-          <main class="box is-flex is-flex-grow-1 ml-5 mr-5 p-0 is-clipped bnb-layout__main">
+          <main class="box is-flex is-flex-grow-1 ml-1 is-clipped bnb-layout__main">
             <slot />
           </main>
-          <aside
-            class="box is-flex is-flex-shrink-0 is-align-self-flex-start bnb-layout__panel bnb-layout__panel--right"
-          >
-            <slot name="right" />
-          </aside>
+          
         </section>
       </div>
     </div>
@@ -33,6 +29,7 @@ style(/* CSS */ `
     background-size: cover;
   }
   .bnb-layout__workspace {
+    display: flex;
     width: 100%;
     height: 100%;
     max-height: 40.625rem;
@@ -44,9 +41,23 @@ style(/* CSS */ `
   }
   .bnb-layout__panel {
     overflow: hidden;
-    width: 16rem;
-    max-height: 100%;
+    width: 20vw;
+    background-color: white;
   }
+  @media (max-width: 576px) {
+    .bnb-layout__workspace {
+      display: block;
+    }
+    .bnb-layout__panel {
+        display: flex;
+        justify-content: center;
+        background-color: transparent;
+        width: 100%;
+        position: absolute;
+        z-index: 99;
+    }
+  }
+
   .bnb-layout__panel.bnb-layout__panel--right {
     --scrollbar-thumb-color: rgba(72, 95, 199, 0.25);
     --scrollbar-thumb-border-color: ${theme.colors.light};
@@ -57,6 +68,15 @@ style(/* CSS */ `
   }
   .bnb-layout__main {
     z-index: 1;
+  }
+  @media (max-width: 576px) {
+    .bnb-layout__main {
+      margin-top: 40%;
+      height: 100vw;
+    }
+    .layout__main {
+      height: 100%;
+    }
   }
 `)
 
@@ -96,3 +116,10 @@ style(/* CSS */ `
     scrollbar-color: var(--scrollbar-thumb-color) transparent;
   }
 `)
+
+
+// <aside
+//             class="box is-flex is-flex-shrink-0 is-align-self-flex-start bnb-layout__panel bnb-layout__panel--right"
+//           >
+//             <slot name="right" />
+//           </aside>

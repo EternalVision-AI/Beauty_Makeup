@@ -2,6 +2,7 @@ import { style } from "../lib.js"
 import Background from "./background.js"
 import Eyes from "./eyes.js"
 import Hair from "./hair.js"
+import Hairstyle from "./hairstyle.js"
 import Lipstick from "./lipstick.js"
 import Looks from "./looks.js"
 import LUTs from "./luts.js"
@@ -14,7 +15,7 @@ const routes = [
   { 
     path: "/looks", 
     component: Looks, 
-    meta: { icon: "looks", title: "Eye Lashes" } 
+    meta: { icon: "looks", title: "Lashes" } 
   },
   // {
   //   path: "/presets",
@@ -45,6 +46,11 @@ const routes = [
     path: "/hair",
     component: Hair,
     meta: { icon: "hair", title: "Hair" },
+  },
+  { 
+    path: "/hairstyle", 
+    component: Hairstyle, 
+    meta: { icon: "hair", title: "Hair Style" } 
   },
   // {
   //   path: "/background",

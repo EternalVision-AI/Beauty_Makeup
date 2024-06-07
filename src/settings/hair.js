@@ -33,43 +33,43 @@ export default {
     },
   },
   components: { BnbSetting, BnbSlider },
-  // template: /* HTML */ `
-  //   <bnb-setting @reset="reset">
-  //     <b-field
-  //       class="pt-2 pb-2 mb-2"
-  //       custom-class="has-text-link is-capitalized is-flex is-align-items-center"
-  //     >
-  //       <template #label>
-  //         Color
-  //         <b-checkbox
-  //           class="ml-auto mr-0 bnb-checkbox"
-  //           :value="hair.enabled"
-  //           @input="hair.update({ enabled: $event })"
-  //         />
-  //       </template>
-  //       <div class="is-flex is-align-items-center is-flex-direction-column">
-  //         <b-field
-  //           v-for="(color, idx) in colors"
-  //           :key="idx"
-  //           class="pt-2 pb-2 mb-2"
-  //           custom-class="has-text-link is-capitalized is-flex is-align-items-center"
-  //         >
-  //           <b-colorpicker
-  //             :class="[{ 'bnb-colorpicker__inactive': color.split(' ')[3] == 0 }, 'bnb-colorpicker']"
-  //             size="is-small"
-  //             :value="parser(color)"
-  //             :disabled="!hair.enabled"
-  //             :color-formatter="formatter"
-  //             @input="updateColor(formatter($event), idx)"
-  //             representation="square"
-  //             alpha
-  //             append-to-body
-  //           />
-  //         </b-field>
-  //       </div>
-  //     </b-field>
-  //   </bnb-setting>
-  // `,
+  template: /* HTML */ `
+    <bnb-setting @reset="reset">
+      <b-field
+        class="pt-2 pb-2 mb-2"
+        custom-class="has-text-link is-capitalized is-flex is-align-items-center"
+      >
+        <template #label>
+          Color
+          <b-checkbox
+            class="ml-auto mr-0 bnb-checkbox"
+            :value="hair.enabled"
+            @input="hair.update({ enabled: $event })"
+          />
+        </template>
+        <div class="is-flex is-align-items-center is-flex-direction-column">
+          <b-field
+            v-for="(color, idx) in colors"
+            :key="idx"
+            class="pt-2 pb-2 mb-2"
+            custom-class="has-text-link is-capitalized is-flex is-align-items-center"
+          >
+            <b-colorpicker
+              :class="[{ 'bnb-colorpicker__inactive': color.split(' ')[3] == 0 }, 'bnb-colorpicker']"
+              size="is-small"
+              :value="parser(color)"
+              :disabled="!hair.enabled"
+              :color-formatter="formatter"
+              @input="updateColor(formatter($event), idx)"
+              representation="square"
+              alpha
+              append-to-body
+            />
+          </b-field>
+        </div>
+      </b-field>
+    </bnb-setting>
+  `,
 }
 
 style(/* CSS */ `

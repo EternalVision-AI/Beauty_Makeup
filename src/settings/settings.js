@@ -5,7 +5,7 @@ export default {
   props: ["routes"],
   data: () => Store,
   template: /* HTML */ `
-    <div class="is-flex is-flex-direction-column has-background-white bnb-settings">
+    <div class="is-flex has-background-white bnb-settings">
       <b-button
         v-for="route in routes"
         :key="route.path"
@@ -16,7 +16,6 @@ export default {
         icon-right="chevron-right"
         type="is-link"
         inverted
-        expanded
       >
         {{ route.meta.title }}
       </b-button>
@@ -36,6 +35,8 @@ export default {
 
 style(/* CSS */ `
   .bnb-settings {
+    display: flex;
+    flex-direction: column;
     overflow-x: hidden;
     overflow-y: auto;
     height: calc(100% + 0.25rem);
@@ -43,6 +44,7 @@ style(/* CSS */ `
     padding-right: 0.75rem;
     margin: -0.125rem;
     margin-right: -0.75rem;
+    width: 95%
   }
   @supports (scrollbar-gutter: stable) {
     .bnb-settings {
@@ -57,4 +59,28 @@ style(/* CSS */ `
   .bnb-settings__reset-btn .bnb-icon {
     margin-right: 0.25rem;
   }
+
+
+
+  @media (max-width: 576px) {
+    .bnb-settings {
+      flex-wrap: wrap;
+      flex-direction: row;
+      background-color: transparent;
+
+    }
+    .bnb-settings__link {
+      width: 16%;
+    }
+    .bnb-settings__link .icon + *{
+        font-size: 0px;
+    }
+    @supports (scrollbar-gutter: stable) {
+      .bnb-settings {
+        padding-right: 0.125rem;
+        scrollbar-gutter: stable;
+      }
+    }
+  }
+  
 `)

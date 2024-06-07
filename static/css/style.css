@@ -121,7 +121,7 @@ a:hover{
 
 .social-icons a{
     color: var(--text-color);
-    font-size: 18px;
+    font-size: 10px;
     margin-right: 3px;
     transition: var(--transition-default);
     -webkit-transition: var(--transition-default);

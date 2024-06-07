@@ -24,7 +24,7 @@ export default {
   template: /* HTML */ `
     <form
       :class="
-      ['is-flex is-flex-direction-column has-background-white is-relative bnb-setting',
+      ['is-flex is-flex-direction-column is-relative bnb-setting',
       {
         'bnb-setting__setting--overflowed': overflowed,
         'bnb-setting__setting--ended': ended,
@@ -111,5 +111,13 @@ style(/* CSS */ `
   }
   .bnb-settings__reset-btn .bnb-icon {
     margin-right: 0.25rem;
+  }
+
+
+  @media (max-width: 576px) {
+    .bnb-setting__content {
+      height: 60vh;
+  background-color: transparent;
+}
   }
 `)

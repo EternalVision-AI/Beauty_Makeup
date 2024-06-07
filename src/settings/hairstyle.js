@@ -1,8 +1,10 @@
 import { style } from "../lib.js"
 import BnbAsset from "./components/asset.js"
 import BnbSetting from "./components/setting.js"
-import Config from "./data/looks.js"
+import Config from "./data/hairstyle.js"
 import { look } from "./stores/index.js"
+
+
 
 export default {
   data: () => ({ looks: Config, selectedLook: look }),
@@ -32,10 +34,8 @@ export default {
 style(/* CSS */ `
   .bnb-looks {
     margin-right: -0.75rem;
-    background-color: transparent;
+    // background: url('static/images/eyes.jpg') no-repeat;
     background-size: contain;
-    display: flex;
-    justify-content: center;
   }
 
 `)
