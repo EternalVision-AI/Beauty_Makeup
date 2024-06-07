@@ -119,31 +119,31 @@ export default {
     cover: "assets/looks/mega/Eyeliner.png",
     texture: "assets/textures/mega/makeup_eyeliner.png",
   },
-  makeup_cat_1: {
-    title: "Cat_1",
-    cover: "assets/looks/cat/Cat_1.png",
-    texture: "assets/textures/cat/makeup_cat_1.png",
-  },
-  makeup_cat_2: {
-    title: "Cat_2",
-    cover: "assets/looks/cat/Cat_2.png",
-    texture: "assets/textures/cat/makeup_cat_2.png",
-  },
-  makeup_cat_3: {
-    title: "Cat_3",
-    cover: "assets/looks/cat/Cat_3.png",
-    texture: "assets/textures/cat/makeup_cat_3.png",
-  },
-  makeup_cat_4: {
-    title: "Cat_4",
-    cover: "assets/looks/cat/Cat_4.png",
-    texture: "assets/textures/cat/makeup_cat_4.png",
-  },
-  makeup_cat_5: {
-    title: "Cat_5",
-    cover: "assets/looks/cat/Cat_5.png",
-    texture: "assets/textures/cat/makeup_cat_5.png",
-  },
+  // makeup_cat_1: {
+  //   title: "Cat_1",
+  //   cover: "assets/looks/cat/Cat_1.png",
+  //   texture: "assets/textures/cat/makeup_cat_1.png",
+  // },
+  // makeup_cat_2: {
+  //   title: "Cat_2",
+  //   cover: "assets/looks/cat/Cat_2.png",
+  //   texture: "assets/textures/cat/makeup_cat_2.png",
+  // },
+  // makeup_cat_3: {
+  //   title: "Cat_3",
+  //   cover: "assets/looks/cat/Cat_3.png",
+  //   texture: "assets/textures/cat/makeup_cat_3.png",
+  // },
+  // makeup_cat_4: {
+  //   title: "Cat_4",
+  //   cover: "assets/looks/cat/Cat_4.png",
+  //   texture: "assets/textures/cat/makeup_cat_4.png",
+  // },
+  // makeup_cat_5: {
+  //   title: "Cat_5",
+  //   cover: "assets/looks/cat/Cat_5.png",
+  //   texture: "assets/textures/cat/makeup_cat_5.png",
+  // },
   // makeup_40s: {
   //   title: "40s",
   //   cover: "assets/looks/40s.jpg",

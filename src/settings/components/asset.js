@@ -17,8 +17,8 @@ style(/* CSS */ `
     opacity: 0.85;
   }
   .bnb-asset {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 4.5rem;
+    height: 4.5rem;
     border-radius: 16px;
     cursor: pointer;
   }
