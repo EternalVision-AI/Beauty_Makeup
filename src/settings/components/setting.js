@@ -104,20 +104,20 @@ style(/* CSS */ `
     margin-right: -0.25rem;
   }
   .bnb-setting__setting--overflowed .bnb-setting__content {
-    margin-right: -0.75rem;
+    // margin-right: -0.75rem;
   }
   .bnb-settings__reset-btn {
     z-index: 2;
   }
   .bnb-settings__reset-btn .bnb-icon {
-    margin-right: 0.25rem;
+    // margin-right: 0.25rem;
   }
 
 
   @media (max-width: 576px) {
     .bnb-setting__content {
       height: 60vh;
-  background-color: transparent;
-}
+      background-color: transparent;
+    }
   }
 `)
