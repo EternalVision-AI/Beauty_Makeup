@@ -103,7 +103,7 @@ style(/* CSS */ `
   .eyeshape-select {
     text-align: center;
     border: 1px solid blue;
-    width: 80%;
+    // width: 80%;
   }
   .eyeshape-help {
     background-color: white;
