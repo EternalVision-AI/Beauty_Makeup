@@ -42,16 +42,16 @@ const routes = [
     component: Lipstick,
     meta: { icon: "lipstick", title: "Lipstick" },
   },
-  {
-    path: "/hair",
-    component: Hair,
-    meta: { icon: "hair", title: "Hair" },
-  },
-  { 
-    path: "/hairstyle", 
-    component: Hairstyle, 
-    meta: { icon: "hair", title: "Hair Style" } 
-  },
+  // {
+  //   path: "/hair",
+  //   component: Hair,
+  //   meta: { icon: "hair", title: "Hair" },
+  // },
+  // { 
+  //   path: "/hairstyle", 
+  //   component: Hairstyle, 
+  //   meta: { icon: "hair", title: "Hair Style" } 
+  // },
   // {
   //   path: "/background",
   //   component: Background,
