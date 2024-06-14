@@ -5,58 +5,14 @@ export default {
   data: () => ({ ...stores }),
   computed: {
     features: ({
-      background,
       brows,
       eyelashes,
       eyes,
       eyesMakeup,
-      hair,
-      lipstick,
-      lipstickParams,
       look,
-      lut,
       morphs,
-      faceMakeup,
-      skin,
-      softlight,
-      teethWhitening,
     }) => {
       const features = []
-
-      for (const [name, morph] of Object.entries(morphs))
-        if (morph.strength > 0)
-          features.push({
-            group: "Retouch",
-            name: morph.title,
-            clear: () => morphs.reset(name),
-          })
-      if (teethWhitening.strength > 0)
-        features.push({
-          group: "Retouch",
-          name: teethWhitening.title,
-          clear: () => teethWhitening.reset(),
-        })
-
-      for (const [name, region] of Object.entries(faceMakeup))
-        if (region.enabled)
-          features.push({
-            group: "Makeup",
-            name: region.title,
-            clear: () => faceMakeup.reset(name),
-          })
-      for (const [name, property] of Object.entries(skin))
-        if (property.enabled || property.strength > 0)
-          features.push({
-            group: "Makeup",
-            name: property.title,
-            clear: () => skin.reset(name),
-          })
-      if (softlight.strength > 0)
-        features.push({
-          group: "Makeup",
-          name: softlight.title,
-          clear: () => softlight.reset(),
-        })
 
       if (brows.enabled)
         features.push({
@@ -85,52 +41,6 @@ export default {
             clear: () => eyes.reset(name),
           })
 
-      if (lipstick.enabled) {
-        features.push({
-          group: "Lipstick",
-          name: "Color",
-          clear: () => lipstick.reset(),
-        })
-
-        const shine = []
-        const glitter = []
-
-        for (const [name, parameter] of Object.entries(lipstickParams)) {
-          const initValue = ["brightness", "saturation"].includes(name) ? 1 : 0
-
-          if (parameter.value === initValue) continue
-
-          if (name.includes("shine")) {
-            if (shine.push(name) === 1)
-              features.push({
-                group: "Lipstick",
-                name: "Shine",
-                clear: () => shine.forEach((name) => lipstickParams.reset(name)),
-              })
-          } else if (name.includes("glitter")) {
-            if (glitter.push(name) === 1)
-              features.push({
-                group: "Lipstick",
-                name: "Glitter",
-                clear: () => glitter.forEach((name) => lipstickParams.reset(name)),
-              })
-          } else {
-            features.push({
-              group: "Lipstick",
-              name: parameter.title,
-              clear: () => lipstickParams.reset(name),
-            })
-          }
-        }
-      }
-
-      if (hair.enabled)
-        features.push({
-          group: "Other",
-          name: "Hair color",
-          clear: () => hair.reset(),
-        })
-
       if (look.texture)
         features.push({
           group: "Other",
@@ -138,20 +48,7 @@ export default {
           clear: () => look.reset(),
         })
 
-      if (background.texture)
-        features.push({
-          group: "Other",
-          name: "Background",
-          clear: () => background.reset(),
-        })
-
-      if (lut.texture)
-        features.push({
-          group: "Other",
-          name: `LUT "${lut.title}"`,
-          clear: () => lut.reset(),
-        })
-
+      
       return features
     },
     empty: (vm) => vm.features.length === 0,
@@ -160,33 +57,15 @@ export default {
   methods: {
     serialize() {
       const {
-        background,
         brows,
         eyelashes,
         eyes,
         eyesMakeup,
-        hair,
-        lipstick,
-        lipstickParams,
         look,
-        lut,
         morphs,
-        faceMakeup,
-        skin,
-        softlight,
-        teethWhitening,
       } = this
 
       const dump = {}
-
-      if (background.texture) {
-        dump.background = {}
-        dump.background.texture = background.texture.name || background.texture
-        dump.background.contentMode = background.contentMode
-        dump.background.transparency = background.transparency
-        dump.background.rotation = background.rotation
-        dump.background.scale = background.scale
-      }
 
       if (brows.enabled) dump.brows = brows.color
 
@@ -198,30 +77,12 @@ export default {
       for (const [name, { enabled, color }] of Object.entries(eyesMakeup))
         if (enabled) (dump.eyesMakeup ??= {})[name] = color
 
-      if (hair.enabled) dump.hair = hair.color
-
-      if (lipstick.enabled) {
-        dump.lipstick = lipstick.color
-        for (const [name, { value }] of Object.entries(lipstickParams))
-          (dump.lipstickParams ??= {})[name] = value
-      }
 
       if (look.texture) dump.look = look.texture
-
-      if (lut.texture) dump.lut = lut.texture
 
       for (const [name, { strength }] of Object.entries(morphs))
         if (strength > 0) (dump.morphs ??= {})[name] = strength
 
-      for (const [name, { enabled, color }] of Object.entries(faceMakeup))
-        if (enabled) (dump.faceMakeup ??= {})[name] = color
-
-      for (const [name, { enabled, color, strength }] of Object.entries(skin))
-        if (enabled || strength > 0) (dump.skin ??= {})[name] = color || strength
-
-      if (softlight.strength > 0) dump.softlight = softlight.strength
-
-      if (teethWhitening.strength > 0) dump.teethWhitening = teethWhitening.strength
 
       return dump
     },

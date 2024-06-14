@@ -19,28 +19,3 @@ export const eyesMakeup = Store.module(
     reset: resetEach,
   }
 )
-
-export const faceMakeup = Store.module(
-  "face-makeup",
-  {
-    highlighter: {
-      title: "Highlighter",
-      color: "0.99 0.99 0.95 0.4",
-      enabled: false,
-    },
-    contour: {
-      title: "Contour",
-      color: "0.64 0.37 0.24 0.2",
-      enabled: false,
-    },
-    blushes: {
-      title: "Blush",
-      color: "0.87 0.45 0.77 0.45",
-      enabled: false,
-    },
-  },
-  {
-    update: updateEach,
-    reset: resetEach,
-  }
-)
